@@ -1,0 +1,8 @@
+{
+   "name": "code-demos-upc-lookup",
+   "version": "0.0.1",
+   "private": true,
+   "scripts": {
+      "build": "exit 0"
+   }
+}
