@@ -1,16 +1,38 @@
 ---
+// Astro "Front Matter". All code here is ONLY processed at BUILD time
+import Counter from "../components/Counter.tsx";
 ---
+
+<!-- This is all JSX! -->
 <html lang="en">
-
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<meta name="viewport" content="width=device-width" />
-	<title>UPC Lookup Service</title>
-</head>
-
-<body>
-	<h1>Code Demos UPC Lookup Service</h1>
-</body>
-
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<style>
+			:global(:root) {
+				font-family: system-ui;
+				padding: 2em 0;
+			}
+			:global(.counter) {
+				display: grid;
+				font-size: 2em;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				margin-top: 2em;
+				place-items: center;
+			}
+			:global(.children) {
+				display: grid;
+				margin-bottom: 2em;
+				place-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<Counter client:visible>
+				<h1>Hello, React Podcast!</h1>
+			</Counter>
+		</main>
+	</body>
 </html>
