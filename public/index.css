@@ -1,0 +1,23 @@
+h1 {
+	color: #555;
+}
+
+label {
+	color: #555;
+	font-size: 20px;
+	margin-right: 10px;
+}
+pre {
+	background-color: #eee;
+	padding: 5px;
+}
+
+.hidden {
+	display: none;
+}
+
+.error {
+	color: red;
+	font-size: 20px;
+	margin-block: 10px;
+}
